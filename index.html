@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AHETO AGRIFARMS ENTERPRISE</title>
+
+<style>
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4fff4;
+  color: #222;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeHero 2s ease;
+}
+@keyframes fadeHero {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.hero h1 {
+  font-size: 42px;
+  letter-spacing: 3px;
+}
+.hero p {
+  font-size: 18px;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: sticky;
+  top: 0;
+  background: #0b7a0b;
+  padding: 10px;
+  text-align: center;
+  z-index: 10;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  color: #0b7a0b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== ABOUT ===== */
+.about {
+  background: white;
+  padding: 30px;
+  border-left: 8px solid #1db954;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card p {
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  color: #0b7a0b;
+}
+
+/* ===== FORM ===== */
+form {
+  background: #eaffea;
+  padding: 30px;
+  border-radius: 12px;
+}
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+button {
+  margin-top: 15px;
+  padding: 14px;
+  background: #0b7a0b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background: black;
+}
+#formMsg {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ===== BACK TO TOP ===== */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 15px;
+  border-radius: 50%;
+  background: #0b7a0b;
+  color: white;
+  border: none;
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0b7a0b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+footer a {
+  color: yellow;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div>
+    <h1>AHETO AGRIFARMS ENTERPRISE</h1>
+    <p>Growing Fresh • Feeding the Nation 🌱</p>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#crops">Crops</a>
+  <a href="#contact">Contact</a>
+  <a href="https://www.youtube.com/@WisdomPlug-1" target="_blank">YouTube</a>
+</nav>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="reveal">
+  <h2>About Us</h2>
+  <div class="about">
+    <p>
+      <strong>AHETO AGRIFARMS ENTERPRISE</strong> is dedicated to sustainable
+      farming and the cultivation of fresh vegetables and grains for healthy living.
+    </p>
+  </div>
+</section>
+
+<!-- ===== CROPS ===== -->
+<section id="crops" class="reveal">
+  <h2>Our Crops</h2>
+  <div class="gallery">
+    <div class="card"><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2"><p>Green Pepper</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4"><p>Cucumber</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"><p>Tomato</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1603052875225-2a8e38d7b0fd"><p>Chilly Pepper</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1604908554025-e477c0f97b8b"><p>Bell Pepper</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1592928300831-1a5c8b9c7b1a"><p>Aubergine</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1615486364462-ef636b9e0e42"><p>Lettuce</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea"><p>Squash</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1567306301408-9b74779a11af"><p>Watermelon</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1598514982846-275dcf8a74bb"><p>Rice</p></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="reveal">
+  <h2>Contact Us</h2>
+  <form onsubmit="sendMessage(); return false;">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+    <p id="formMsg"></p>
+  </form>
+</section>
+
+<footer>
+  © 2025 AHETO AGRIFARMS ENTERPRISE 🌾 <br>
+  YouTube:
+  <a href="https://www.youtube.com/@WisdomPlug-1" target="_blank">The Wisdom Plug</a>
+</footer>
+
+<button id="topBtn" onclick="scrollTopPage()">⬆</button>
+
+<script>
+/* ===== SCROLL REVEAL ===== */
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    let pos = el.getBoundingClientRect().top;
+    let screen = window.innerHeight / 1.2;
+    if (pos < screen) el.classList.add("active");
+  });
+
+  document.getElementById("topBtn").style.display =
+    window.scrollY > 300 ? "block" : "none";
+});
+
+/* ===== IMMEDIATE REVEAL ON PAGE LOAD ===== */
+window.addEventListener("load", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    el.classList.add("active");
+  });
+});
+
+/* ===== SMOOTH SCROLL FOR NAV ===== */
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+/* ===== FORM ===== */
+function sendMessage() {
+  let name = document.getElementById("name").value;
+  let msg = document.getElementById("formMsg");
+
+  if (name === "") {
+    msg.style.color = "red";
+    msg.innerText = "❌ Please enter your name";
+  } else {
+    msg.style.color = "green";
+    msg.innerText = "✅ Message sent successfully. Thank you!";
+  }
+}
+
+/* ===== BACK TO TOP ===== */
+function scrollTopPage() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
